@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Calculator</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            width: 320px;
+            background: #000;
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .display {
+            background: #000;
+            color: #fff;
+            font-size: 48px;
+            text-align: right;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            min-height: 60px;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        button {
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #555;
+        }
+        button.zero {
+            grid-column: span 2;
+            border-radius: 40px;
+        }
+        button.operator {
+            background: #ff9500;
+            color: #fff;
+        }
+        button.operator:hover {
+            background: #ffb84d;
+        }
+        button.equals {
+            background: #ff9500;
+            color: #fff;
+        }
+        button.equals:hover {
+            background: #ffb84d;
+        }
+        button.clear {
+            background: #a6a6a6;
+            color: #000;
+        }
+        button.clear:hover {
+            background: #c8c8c8;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" id="clear">AC</button>
+            <button class="operator" id="plus-minus">+/-</button>
+            <button class="operator" id="percent">%</button>
+            <button class="operator" id="divide">÷</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button class="operator" id="multiply">×</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button class="operator" id="subtract">-</button>
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button class="operator" id="add">+</button>
+            <button class="zero" id="zero">0</button>
+            <button id="decimal">.</button>
+            <button class="equals" id="equals">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
